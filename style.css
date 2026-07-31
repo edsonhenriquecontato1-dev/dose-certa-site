@@ -2,89 +2,146 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
 background:#0d0d0d;
 color:#fff;
+line-height:1.6;
 }
 
 header{
 background:#000;
-padding:35px 20px;
-text-align:center;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 border-bottom:3px solid #d4af37;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h1{
-font-size:42px;
+.logo h1{
+font-size:32px;
 color:#fff;
-letter-spacing:2px;
 }
 
-header p{
+.logo p{
 color:#d4af37;
-margin-top:10px;
-font-size:18px;
+margin-top:5px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin:8px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d4af37;
 }
 
 .hero{
-padding:50px 20px;
+padding:80px 20px;
 text-align:center;
-background:linear-gradient(180deg,#111,#1b1b1b);
+background:linear-gradient(to bottom,#111,#1b1b1b);
 }
 
 .hero h2{
-font-size:34px;
-margin-bottom:15px;
+font-size:42px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:18px;
 color:#ccc;
+font-size:18px;
 margin-bottom:30px;
 }
 
-.botao{
+.btn{
 display:inline-block;
-padding:18px 40px;
 background:#d4af37;
 color:#000;
-text-decoration:none;
-font-weight:bold;
+padding:18px 40px;
 border-radius:12px;
+font-weight:bold;
+text-decoration:none;
 font-size:20px;
+transition:.3s;
 }
 
-.cards{
-padding:30px 20px;
+.btn:hover{
+transform:scale(1.05);
+}
+
+.categoria{
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.categoria h2{
+margin-bottom:20px;
+color:#d4af37;
 }
 
 .card{
 background:#1b1b1b;
-border-radius:20px;
 padding:25px;
-margin-bottom:20px;
+border-radius:18px;
+margin-bottom:25px;
 border:1px solid #333;
-box-shadow:0 0 15px rgba(212,175,55,.2);
+box-shadow:0 0 20px rgba(212,175,55,.15);
 }
 
 .card h3{
-font-size:28px;
-margin-bottom:10px;
+font-size:30px;
+margin-bottom:15px;
 }
 
-.card p{
-color:#ccc;
-font-size:18px;
+.card ul{
+padding-left:20px;
+margin-bottom:15px;
+}
+
+.card li{
+margin-bottom:8px;
+}
+
+.cta{
+padding:60px 20px;
+text-align:center;
+background:#111;
 }
 
 footer{
+background:#000;
 padding:40px 20px;
 text-align:center;
-color:#bbb;
 border-top:2px solid #d4af37;
-margin-top:40px;
-line-height:30px;
+color:#ccc;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.btn{
+width:100%;
+}
 }
