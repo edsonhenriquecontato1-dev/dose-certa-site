@@ -145,3 +145,45 @@ font-size:24px;
 width:100%;
 }
 }
+.bebidas{
+padding:60px 20px;
+background:#111;
+}
+
+.bebidas h2{
+text-align:center;
+font-size:34px;
+color:#d4af37;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.item{
+background:#1c1c1c;
+border-radius:18px;
+overflow:hidden;
+text-align:center;
+padding-bottom:20px;
+box-shadow:0 0 15px rgba(212,175,55,.2);
+}
+
+.item img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.item h3{
+margin:15px 0;
+font-size:24px;
+}
+
+.item p{
+color:#ccc;
+padding:0 15px;
+}
