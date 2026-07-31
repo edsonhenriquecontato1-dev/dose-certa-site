@@ -1,18 +1,21 @@
-
 document.querySelectorAll('nav a').forEach(link => {
 
-link.addEventListener('click', e => {
+    link.addEventListener('click', function(e){
 
-e.preventDefault();
+        e.preventDefault();
 
-document.querySelector(
-link.getAttribute('href')
-).scrollIntoView({
+        const destino = document.querySelector(this.getAttribute('href'));
 
-behavior: 'smooth'
+        if(destino){
+
+            destino.scrollIntoView({
+                behavior:'smooth'
+            });
+
+        }
+
+    });
 
 });
 
-});
-
-});
+console.log("Dose Certa carregado com sucesso!");
