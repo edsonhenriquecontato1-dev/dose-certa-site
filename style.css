@@ -217,7 +217,9 @@ html{
 img{
     max-width:100%;
     display:block;
-  .bebidas{
+}
+
+.bebidas{
     padding:60px 20px;
     background:#111;
 }
@@ -283,7 +285,8 @@ nav a{
     width:100%;
     display:block;
 }
-
-.card{
+    .card{
     margin-bottom:20px;
+}
+
 }
