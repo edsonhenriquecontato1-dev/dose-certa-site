@@ -1,292 +1,178 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html{
-    scroll-behavior:smooth;
-}
+<title>DOSE CERTA | Adega & Conveniência</title>
 
-body{
-    background:#0d0d0d;
-    color:#fff;
-    line-height:1.6;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-    background:#000;
-    padding:20px;
-    border-bottom:3px solid #d4af37;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-.logo{
-    text-align:center;
-}
+<link rel="stylesheet" href="style.css">
+</head>
 
-.logo h1{
-    font-size:42px;
-    color:#fff;
-}
+<body>
 
-.logo p{
-    color:#d4af37;
-    font-size:18px;
-}
+<header>
 
-nav{
-    margin-top:15px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
+<div class="logo">
+<h1>🍻 DOSE CERTA</h1>
+<p>Adega & Conveniência</p>
+</div>
 
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
+<nav>
+<a href="#classico">Clássico</a>
+<a href="#premium">Premium</a>
+<a href="#bebidas">Bebidas</a>
+<a href="#contato">Contato</a>
+</nav>
 
-nav a:hover{
-    color:#d4af37;
-}
+</header>
 
-.hero{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(#1a1a1a,#0d0d0d);
-}
+<section class="hero">
 
-.hero h2{
-    font-size:52px;
-    margin-bottom:20px;
-}
+<h2>A Dose Certa para sua noite.</h2>
 
-.hero p{
-    color:#ccc;
-    font-size:22px;
-    margin-bottom:35px;
-}
+<p>
+Copões • Whisky • Gin • Vodka • Energéticos
+</p>
 
-.botao{
-    display:inline-block;
-    background:#d4af37;
-    color:#000;
-    padding:18px 45px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:20px;
-    transition:.3s;
-}
+<a class="botao"
+href="https://wa.me/5514996100151?text=Olá! Quero fazer um pedido na Dose Certa."
+target="_blank">
 
-.botao:hover{
-    transform:scale(1.05);
-}
+PEDIR AGORA
 
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
-}
+</a>
 
-section h2{
-    text-align:center;
-    color:#d4af37;
-    font-size:38px;
-    margin-bottom:40px;
-}.grade{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
+</section>
 
-.card{
-    background:#1c1c1c;
-    border-radius:18px;
-    overflow:hidden;
-    text-align:center;
-    padding-bottom:20px;
-    box-shadow:0 0 15px rgba(212,175,55,.15);
-    transition:.3s;
-}
+<section id="classico">
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(212,175,55,.35);
-}
+<h2>🥃 Copão Clássico</h2>
 
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
+<div class="grade">
 
-.card h3{
-    margin:18px 0 10px;
-    font-size:28px;
-}
+<div class="card">
 
-.preco{
-    color:#d4af37;
-    font-size:32px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
+<h3>R$ 25</h3>
 
-.card ul{
-    list-style:none;
-    padding:0 20px;
-}
+<ul>
+<li>White Horse</li>
+<li>Jack Daniel's Old No.7</li>
+<li>Jack Daniel's Apple</li>
+<li>Jack Daniel's Honey</li>
+<li>Baly Tropical</li>
+<li>Crazy Cat Frutas Vermelhas</li>
+<li>Crazy Cat Maçã Verde</li>
+</ul>
 
-.card li{
-    padding:6px 0;
-    color:#ddd;
-}
+</div>
 
-#destaques .card h3{
-    color:#fff;
-}
+</div>
 
-footer{
-    background:#000;
-    border-top:3px solid #d4af37;
-    text-align:center;
-    padding:40px 20px;
-}
+</section>
 
-footer h2{
-    color:#d4af37;
-    margin-bottom:20px;
-}
+<section id="premium">
 
-footer p{
-    margin:8px 0;
-    color:#ddd;
-  
-}.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    text-decoration:none;
-    box-shadow:0 8px 20px rgba(0,0,0,.4);
-    transition:.3s;
-    z-index:9999;
-}
+<h2>👑 Copão Premium</h2>
 
-.whatsapp:hover{
-    transform:scale(1.1);
-}
+<div class="grade">
 
-html{
-    scroll-behavior:smooth;
-}
+<div class="card">
 
-::-webkit-scrollbar{
-    width:10px;
-}
+<h3>R$ 40</h3>
 
-::-webkit-scrollbar-track{
-    background:#111;
-}
+<ul>
+<li>Chivas Regal 12</li>
+<li>Buchanan's 12</li>
+<li>Old Parr 12</li>
+<li>Johnnie Walker Double Black</li>
+<li>Johnnie Walker Gold Label</li>
+<li>Baly Tropical</li>
+<li>Crazy Cat Frutas Vermelhas</li>
+<li>Crazy Cat Maçã Verde</li>
+</ul>
 
-::-webkit-scrollbar-thumb{
-    background:#d4af37;
-    border-radius:20px;
-}
+</div>
 
-::-webkit-scrollbar-thumb:hover{
-    background:#f0c94d;
-}
+</div>
 
-img{
-    max-width:100%;
-    display:block;
-}
+</section>
 
-.bebidas{
-    padding:60px 20px;
-    background:#111;
-}
+<section id="bebidas" class="bebidas">
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
+<h2>🍾 Bebidas em Destaque</h2>
 
-.item{
-    background:#1c1c1c;
-    border-radius:18px;
-    overflow:hidden;
-    text-align:center;
-    box-shadow:0 0 15px rgba(212,175,55,.20);
-    transition:.3s;
-}
+<div class="grid">
 
-.item:hover{
-    transform:translateY(-8px);
-}
+<div class="item">
+<img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800" alt="Whisky">
+<h3>Whiskys</h3>
+<p>Jack Daniel's • Chivas • Black Label • Old Parr</p>
+</div>
 
-.item img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
+<div class="item">
+<img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800" alt="Gin">
+<h3>Gin & Vodka</h3>
+<p>Tanqueray • Cîroc • Eternity Gin</p>
+</div>
 
-.item h3{
-    margin:15px 0;
-    color:#d4af37;
-}
+<div class="item">
+<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800" alt="Energéticos">
+<h3>Energéticos</h3>
+<p>Red Bull • Baly • Crazy Cat</p>
+</div>
 
-.item p{
-    color:#ccc;
-    padding:0 15px 20px;
-}
+</div>
 
-@media(max-width:768px){
+</section>
 
-.hero h2{
-    font-size:34px;
-}
+<section id="contato">
 
-.hero p{
-    font-size:18px;
-}
+<h2>📍 Contato</h2>
 
-.logo h1{
-    font-size:30px;
-}
+<div class="card">
 
-nav{
-    gap:10px;
-}
+<p><strong>Endereço:</strong></p>
+<p>Avenida da Saudade nº 6</p>
 
-nav a{
-    font-size:14px;
-}
+<br>
 
-.botao{
-    width:100%;
-    display:block;
-}
-    .card{
-    margin-bottom:20px;
-}
+<p><strong>Funcionamento:</strong></p>
+<p>17h às 03h</p>
 
-}
+<br>
+
+<p><strong>WhatsApp:</strong></p>
+<p>(14) 99610-0151</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>🍻 DOSE CERTA</h3>
+
+<p>Adega & Conveniência</p>
+
+<p>Obrigado pela preferência.</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/5514996100151?text=Olá! Quero fazer um pedido na Dose Certa."
+target="_blank">
+
+📲
+
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
