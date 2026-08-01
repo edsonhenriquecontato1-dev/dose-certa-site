@@ -1,178 +1,236 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-<title>DOSE CERTA | Adega & Conveniência</title>
+body{
+background:#111;
+color:#fff;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.header{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#000;
+border-bottom:2px solid #d4af37;
+z-index:999;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+.logo h1{
+color:#d4af37;
+font-size:28px;
+}
 
-<link rel="stylesheet" href="style.css">
-</head>
+.logo p{
+font-size:13px;
+color:#ccc;
+}
 
-<body>
+nav{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
 
-<header>
+nav a{
+text-decoration:none;
+color:#fff;
+font-size:14px;
+font-weight:600;
+}
 
-<div class="logo">
-<h1>🍻 DOSE CERTA</h1>
-<p>Adega & Conveniência</p>
-</div>
+.banner{
+padding:60px 20px;
+text-align:center;
+background:#1b1b1b;
+}
 
-<nav>
-<a href="#classico">Clássico</a>
-<a href="#premium">Premium</a>
-<a href="#bebidas">Bebidas</a>
-<a href="#contato">Contato</a>
-</nav>
+.banner h2{
+font-size:34px;
+color:#d4af37;
+margin-bottom:15px;
+}
 
-</header>
+.banner p{
+color:#ddd;
+margin-bottom:25px;
+}
 
-<section class="hero">
+.btn{
+display:inline-block;
+background:#d4af37;
+color:#000;
+padding:14px 30px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+}
+.informacoes{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+padding:20px;
+}
 
-<h2>A Dose Certa para sua noite.</h2>
+.informacoes div{
+background:#222;
+padding:15px;
+text-align:center;
+border-radius:10px;
+}
 
-<p>
-Copões • Whisky • Gin • Vodka • Energéticos
-</p>
+section{
+padding:25px;
+}
 
-<a class="botao"
-href="https://wa.me/5514996100151?text=Olá! Quero fazer um pedido na Dose Certa."
-target="_blank">
+section h2{
+margin-bottom:20px;
+color:#d4af37;
+}
 
-PEDIR AGORA
+#numeroMesa{
+width:100%;
+padding:15px;
+font-size:18px;
+border-radius:10px;
+border:none;
+}
 
-</a>
+.cards{
+display:grid;
+gap:18px;
+}
 
-</section>
+.card{
+background:#1d1d1d;
+padding:18px;
+border-radius:15px;
+border:1px solid #333;
+}
 
-<section id="classico">
+.card h3{
+margin-bottom:10px;
+}
 
-<h2>🥃 Copão Clássico</h2>
+.preco{
+font-size:24px;
+font-weight:bold;
+color:#d4af37;
+margin:10px 0;
+}
 
-<div class="grade">
+.card button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#d4af37;
+font-size:17px;
+font-weight:bold;
+}
+.carrinho-fixo{
+position:fixed;
+bottom:20px;
+left:20px;
+right:20px;
+}
 
-<div class="card">
+.carrinho-fixo button{
+width:100%;
+padding:18px;
+font-size:20px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:50px;
+font-weight:bold;
+}
 
-<h3>R$ 25</h3>
+.painel-carrinho{
+display:none;
+position:fixed;
+top:0;
+right:0;
+width:100%;
+max-width:400px;
+height:100%;
+background:#1b1b1b;
+padding:20px;
+overflow:auto;
+z-index:9999;
+}
 
-<ul>
-<li>White Horse</li>
-<li>Jack Daniel's Old No.7</li>
-<li>Jack Daniel's Apple</li>
-<li>Jack Daniel's Honey</li>
-<li>Baly Tropical</li>
-<li>Crazy Cat Frutas Vermelhas</li>
-<li>Crazy Cat Maçã Verde</li>
-</ul>
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:99999;
+}
 
-</div>
+.modal-content{
+background:#222;
+width:100%;
+max-width:400px;
+padding:20px;
+border-radius:15px;
+}
 
-</div>
+.modal-content h2{
+color:#d4af37;
+margin-bottom:15px;
+}
 
-</section>
+.modal-content label{
+display:block;
+margin-top:15px;
+margin-bottom:5px;
+}
 
-<section id="premium">
+.modal-content select,
+.modal-content textarea{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#333;
+color:#fff;
+}
 
-<h2>👑 Copão Premium</h2>
+.modal-content textarea{
+height:80px;
+resize:none;
+}
 
-<div class="grade">
+.modal-content button{
+width:100%;
+margin-top:15px;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#d4af37;
+font-weight:bold;
+}
 
-<div class="card">
-
-<h3>R$ 40</h3>
-
-<ul>
-<li>Chivas Regal 12</li>
-<li>Buchanan's 12</li>
-<li>Old Parr 12</li>
-<li>Johnnie Walker Double Black</li>
-<li>Johnnie Walker Gold Label</li>
-<li>Baly Tropical</li>
-<li>Crazy Cat Frutas Vermelhas</li>
-<li>Crazy Cat Maçã Verde</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="bebidas" class="bebidas">
-
-<h2>🍾 Bebidas em Destaque</h2>
-
-<div class="grid">
-
-<div class="item">
-<img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=800" alt="Whisky">
-<h3>Whiskys</h3>
-<p>Jack Daniel's • Chivas • Black Label • Old Parr</p>
-</div>
-
-<div class="item">
-<img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800" alt="Gin">
-<h3>Gin & Vodka</h3>
-<p>Tanqueray • Cîroc • Eternity Gin</p>
-</div>
-
-<div class="item">
-<img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=800" alt="Energéticos">
-<h3>Energéticos</h3>
-<p>Red Bull • Baly • Crazy Cat</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contato">
-
-<h2>📍 Contato</h2>
-
-<div class="card">
-
-<p><strong>Endereço:</strong></p>
-<p>Avenida da Saudade nº 6</p>
-
-<br>
-
-<p><strong>Funcionamento:</strong></p>
-<p>17h às 03h</p>
-
-<br>
-
-<p><strong>WhatsApp:</strong></p>
-<p>(14) 99610-0151</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>🍻 DOSE CERTA</h3>
-
-<p>Adega & Conveniência</p>
-
-<p>Obrigado pela preferência.</p>
-
-</footer>
-
-<a class="whatsapp"
-href="https://wa.me/5514996100151?text=Olá! Quero fazer um pedido na Dose Certa."
-target="_blank">
-
-📲
-
-</a>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+.modal-content button:last-child{
+background:#555;
+color:#fff;
+}
+footer{
+background:#000;
+padding:30px;
+text-align:center;
+margin-top:40px;
+}
